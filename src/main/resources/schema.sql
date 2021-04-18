@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY NOT NULL,
+    username VARCHAR(45) NOT NULL,
+    password TEXT NOT NULL,
+    algoritm TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS authority (
+    id SERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR(45) NOT NULL,
+    user_id INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS product (
+    id SERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR(45) NOT NULL,
+    price VARCHAR(45) NOT NULL,
+    currency VARCHAR(45) NOT NULL
+);
