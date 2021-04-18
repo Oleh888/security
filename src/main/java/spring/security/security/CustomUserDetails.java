@@ -10,8 +10,8 @@ import spring.security.entity.User;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-@Getter
 @AllArgsConstructor
+@Getter
 public class CustomUserDetails implements UserDetails {
     private final User user;
 

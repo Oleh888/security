@@ -2,19 +2,21 @@ package spring.security.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+
 import javax.persistence.*;
 
-@Entity(name = "authority")
-@Setter
+@Entity
 @Getter
-public class Authority {
+@Setter
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
+    private double price;
 
-    @JoinColumn(name = "users_id")
-    @ManyToOne
-    private User user;
+    @Enumerated(EnumType.STRING)
+    private Currency currency;
 }
+
